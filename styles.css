@@ -74,13 +74,3 @@ h1 {
     background-color: #43a047; /* Darker on hover */
     transform: scale(1.05); /* Slightly enlarges on hover */
 }
-
-
-.timer-container {
-  text-align: north;
-}
-
-#timer {
-  font-size: 3rem;
-  color: #333;
-}
