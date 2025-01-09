@@ -72,10 +72,5 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Congratulations! You found them all!');
         }
     }
-    
 
-
-// Start the timer with a duration (e.g., 1 hour = 3600 seconds)
-    startTimer(60);
-    startButton.addEventListener('click', createBoard);
 });
