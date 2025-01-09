@@ -72,5 +72,5 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Congratulations! You found them all!');
         }
     }
-
+    startButton.addEventListener('click', createBoard);
 });
