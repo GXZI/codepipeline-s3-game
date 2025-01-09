@@ -72,6 +72,29 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Congratulations! You found them all!');
         }
     }
+    
+    function startTimer(durationInSeconds) {
+  const timerDisplay = document.getElementById("timer");
+  let remainingTime = durationInSeconds;
 
+  const interval = setInterval(() => {
+    const hours = Math.floor(remainingTime / 3600);
+    const minutes = Math.floor((remainingTime % 3600) / 60);
+    const seconds = remainingTime % 60;
+
+    timerDisplay.textContent = 
+      `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+    if (remainingTime <= 0) {
+      clearInterval(interval);
+      timerDisplay.textContent = "Time's up!";
+    } else {
+      remainingTime--;
+    }
+  }, 1000);
+}
+
+// Start the timer with a duration (e.g., 1 hour = 3600 seconds)
+    startTimer(60);
     startButton.addEventListener('click', createBoard);
 });
